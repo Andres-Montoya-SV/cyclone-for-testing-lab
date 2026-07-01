@@ -1,0 +1,3 @@
+# Machine key material — create locally with: ../secure_cipher keygen .
+passphrase
+*.key

@@ -1,0 +1,54 @@
+# Build artifacts
+/secure_cipher
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# Local keys (generate with `keygen`; never commit secrets)
+keys/passphrase
+keys/*.key
+**/passphrase
+
+# Encryption outputs and simulation artifacts
+*.enc
+RECOVERY_INSTRUCTIONS.txt
+
+# Local archives and dumps
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+.cursor/
+
+# Debug symbols and cores
+*.dSYM/
+core
+vgcore.*
+*.stackdump
+
+# Coverage / sanitizers
+*.gcno
+*.gcda
+*.profraw
+
+# CMake / other generators (if added later)
+build/
+cmake-build-*/
+compile_commands.json

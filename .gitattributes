@@ -1,0 +1,12 @@
+* text=auto
+
+*.cpp text diff=cpp
+*.h text diff=cpp
+*.c text diff=cpp
+Makefile text
+*.md text diff=markdown
+*.yml text diff=yaml
+
+*.png binary
+*.jpg binary
+*.zip binary
