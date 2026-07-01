@@ -2,6 +2,18 @@
 
 Educational file-encryption lab tool for cybersecurity training. It simulates directory-level file locking with real cryptography (libsodium) so blue teams can practice detection, containment, and recovery in controlled environments.
 
+---
+
+> **Portfolio notice — read before anything else**
+>
+> This repository is on GitHub **only for my personal portfolio**. It is **not** licensed for redistribution, republishing, or use against any system or person without explicit written permission from me.
+>
+> Parts of the code were **improved and documented with AI assistance**; see [NOTICE.md](NOTICE.md).
+>
+> Technical documentation: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+
+---
+
 > **Authorized use only.** Run only in isolated lab VMs or dedicated training hosts with explicit permission. Do not deploy against real user data or production systems.
 
 ## Features
@@ -13,6 +25,14 @@ Educational file-encryption lab tool for cybersecurity training. It simulates di
 - **Buffered I/O** for large files
 - **Environment audit** (`--audit-env`) for blue-team exercises
 - **VM guard** — exits when virtualization is detected (override with `SECURE_CIPHER_ALLOW_VM=1` in lab)
+
+## Documentation
+
+| Document | Contents |
+|----------|----------|
+| [NOTICE.md](NOTICE.md) | Portfolio-only terms, no redistribution, AI disclosure |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | How the code works — modules, crypto flow, threading |
+| [keys/README.md](keys/README.md) | Key generation and usage |
 
 ## Requirements
 
@@ -100,8 +120,10 @@ Writes `RECOVERY_INSTRUCTIONS.txt` in the target directory.
 ├── cli/                     # Argument parsing
 ├── platform/                # OS-specific helpers
 ├── anti_analysis/           # Audit report + VM guard
+├── docs/                    # Architecture documentation
 ├── keys/                    # Local key material (gitignored)
 ├── data/                    # Sample files for lab exercises
+├── NOTICE.md                # Portfolio & use restrictions
 └── Makefile
 ```
 
@@ -114,4 +136,4 @@ Writes `RECOVERY_INSTRUCTIONS.txt` in the target directory.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Use responsibly and only where you have explicit authorization.
+Portfolio / educational use only — see [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md). **Not for redistribution.**
